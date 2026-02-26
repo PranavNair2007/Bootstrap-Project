@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Showcase</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                CreativeStudio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#pricing">Pricing</a></li>
+                            <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><button class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">More
+                                    Info (Offcanvas)</button></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search ideas...">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80"
+                    class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 fw-bold">Innovation Redefined</h2>
+                    <p>Using Bootstrap 5.3 to build the next generation of web apps.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+                    class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block text-start">
+                    <h2>Collaborative Design</h2>
+                    <p>Building beautiful interfaces together.</p>
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">Get
+                        Started</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80"
+                    class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block text-end">
+                    <h2>Responsive Everywhere</h2>
+                    <p>Mobile-first layouts for every device on the planet.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </header>
+
+    <main class="container my-5">
+
+
+
+        <section id="pricing" class="pricing-section">
+            <div class="container text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">Simple, Transparent Pricing</h2>
+                <p class="lead text-muted">Choose the perfect plan for your creative journey.</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-center">
+                <!-- Basic Plan -->
+                <div class="col">
+                    <div class="card h-100 pricing-card shadow">
+                        <div class="card-header">
+                            <h3 class="pricing-title">Starter</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="price-box">
+                                <span class="price-currency">₹</span>
+                                <span class="price-amount">0</span>
+                                <p class="price-period">per month</p>
+                            </div>
+                            <ul class="list-unstyled features-list">
+                                <li>10 Projects</li>
+                                <li>2 GB Cloud Storage</li>
+                                <li>Standard Support</li>
+                                <li class="text-muted text-decoration-line-through">Custom Domains</li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="#" class="btn btn-outline-primary pricing-btn w-100">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Plan (Featured) -->
+                <div class="col">
+                    <div class="card h-100 pricing-card featured shadow-lg">
+                        <div class="featured-badge">Popular</div>
+                        <div class="card-header pricing-header-gradient">
+                            <h3 class="pricing-title">Pro</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="price-box">
+                                <span class="price-currency">₹</span>
+                                <span class="price-amount">15</span>
+                                <p class="price-period">per month</p>
+                            </div>
+                            <ul class="list-unstyled features-list">
+                                <li><strong>Unlimited</strong> Projects</li>
+                                <li>10 GB Cloud Storage</li>
+                                <li>Priority email support</li>
+                                <li>Custom Domains</li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="#" class="btn btn-primary pricing-btn w-100">Upgrade to Pro</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="col">
+                    <div class="card h-100 pricing-card shadow">
+                        <div class="card-header">
+                            <h3 class="pricing-title">Team</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="price-box">
+                                <span class="price-currency">₹</span>
+                                <span class="price-amount">29</span>
+                                <p class="price-period">per month</p>
+                            </div>
+                            <ul class="list-unstyled features-list">
+                                <li><strong>Everything in Pro</strong></li>
+                                <li>50 GB Cloud Storage</li>
+                                <li>24/7 Phone Support</li>
+                                <li>API Access</li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="#" class="btn btn-outline-primary pricing-btn w-100">Contact Sales</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-5 bg-dark px-4 rounded shadow-sm border border-dark">
+            <h2 class="mb-4">Visual Portfolio <span class="badge bg-secondary rounded-pill fs-6">New</span></h2>
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="https://picsum.photos/id/101/400/300" class="img-fluid gallery-img rounded shadow"
+                        alt="Portfolio 1" data-bs-toggle="tooltip" title="Creative Modernism">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="https://picsum.photos/id/102/400/300" class="img-fluid gallery-img rounded shadow"
+                        alt="Portfolio 2" data-bs-toggle="popover"
+                        data-bs-content="This project won the 2023 Design Award.">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="https://picsum.photos/id/103/400/300" class="img-fluid gallery-img rounded shadow"
+                        alt="Portfolio 3">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div id="formAlertPlaceholder"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card pricing-card contact-card shadow-lg">
+                        <div class="card-header contact-header-gradient text-center py-4">
+                            <h3 class="pricing-title text-dark">Send us a Message</h3>
+                        </div>
+                        <div class="card-body p-5">
+                            <form id="contactForm" class="needs-validation" novalidate>
+                                <div class="mb-4">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text"
+                                        class="form-control form-control-lg bg-dark text-white border-secondary"
+                                        id="name" required placeholder="Your Name">
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div id="contactMethodContainer" class="mb-4">
+                                    <label for="contactInput" id="contactLabel" class="form-label">Email address</label>
+                                    <input type="email"
+                                        class="form-control form-control-lg bg-dark text-white border-secondary"
+                                        id="contactInput" required placeholder="name@example.com">
+                                    <div id="contactFeedback" class="invalid-feedback">Please enter a valid email.</div>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label d-block fw-bold">Preferred Contact Method</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="contactMethod"
+                                            id="methodEmail" value="email" checked>
+                                        <label class="form-check-label" for="methodEmail">Email</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="contactMethod"
+                                            id="methodPhone" value="phone">
+                                        <label class="form-check-label" for="methodPhone">Phone</label>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="newsletter"
+                                            required>
+                                        <label class="form-check-label" for="newsletter">
+                                            I agree to receive the newsletter
+                                        </label>
+                                        <div class="invalid-feedback">You must agree before submitting.</div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-5">
+                                    <button class="btn btn-primary pricing-btn px-5 w-100" type="submit">Send
+                                        Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer mt-auto py-4 border-top">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-md-start mb-3 mb-md-0">
+                    <span class="text-muted">&copy; 2026 CreativeStudio, Pranav Nair</span>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <button class="btn btn-sm btn-outline-secondary me-2">Facebook</button>
+                    <button class="btn btn-sm btn-outline-secondary me-2">Twitter</button>
+                    <button class="btn btn-sm btn-outline-secondary">GitHub</button>
+                </div>
+                <div class="col-md-4 text-md-end">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Quick Access</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Notifications <span class="badge bg-danger rounded-pill">3</span>
+                </li>
+                <li class="list-group-item">User Profile</li>
+                <li class="list-group-item">Analytics Dashboard</li>
+                <li class="list-group-item text-danger fw-bold">Logout</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registration Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required placeholder="John Doe">
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" required placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="check1" required>
+                                <label class="form-check-label" for="check1">Agree to terms and conditions</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label d-block">Experience Level</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="level" id="r1" value="beg">
+                                <label class="form-check-label" for="r1">Beginner</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="level" id="r2" value="pro" checked>
+                                <label class="form-check-label" for="r2">Professional</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-100" type="submit">Submit Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el))
+
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el))
+
+
+        const alertPlaceholder = document.getElementById('formAlertPlaceholder')
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible fade show" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+            alertPlaceholder.append(wrapper)
+        }
+
+
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Dynamic Contact Method Toggle
+            const methodEmail = document.getElementById('methodEmail');
+            const methodPhone = document.getElementById('methodPhone');
+            const contactLabel = document.getElementById('contactLabel');
+            const contactInput = document.getElementById('contactInput');
+            const contactFeedback = document.getElementById('contactFeedback');
+
+            const updateContactField = () => {
+                if (methodEmail.checked) {
+                    contactLabel.textContent = 'Email address';
+                    contactInput.type = 'email';
+                    contactInput.placeholder = 'name@example.com';
+                    contactFeedback.textContent = 'Please enter a valid email.';
+                } else {
+                    contactLabel.textContent = 'Phone Number';
+                    contactInput.type = 'tel';
+                    contactInput.placeholder = '+1 (234) 567-8900';
+                    contactFeedback.textContent = 'Please enter a valid phone number.';
+                }
+            };
+
+            methodEmail.addEventListener('change', updateContactField);
+            methodPhone.addEventListener('change', updateContactField);
+
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault()
+                    if (!form.checkValidity()) {
+                        event.stopPropagation()
+                    } else {
+                        appendAlert('Form submitted successfully!', 'success')
+                        alert('Form submitted successfully!')
+                        form.reset()
+                        form.classList.remove('was-validated')
+                        return
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+</body>
+
+</html>
